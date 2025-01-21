@@ -1,0 +1,64 @@
+/* General styles */
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #e0f7fa; /* Changed to a solid light blue background */
+  color: #343a40;
+}
+
+/* Center text container */
+#text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+#text {
+  font-size: 3vw; /* Responsive font size */
+  font-weight: bold;
+  line-height: 1.5;
+  background: linear-gradient(90deg, #ff6b6b, #f8d800, #32e0c4, #4d96ff, #a663cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text 5s linear infinite; /* Animated text color */
+}
+
+#text span {
+  font-size: 3.5vw; /* Larger font size for names/numbers */
+}
+
+#footer {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+#footer a {
+  color: #ffb74d;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+/* Canvas for balloons */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Rainbow text animation */
+@keyframes rainbow-text {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
